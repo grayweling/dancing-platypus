@@ -13,5 +13,9 @@ router.get('/', (req, res) => {
   router.get('/signin', (req, res) => {
     res.render('signin');
   });
+
+  router.get('/leaderboard', (req, res) => {
+    res.render('leaderboard');
+  });
   
 module.exports = router;
