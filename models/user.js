@@ -24,7 +24,7 @@ User.init(
       unique: true,
     },
     score: {
-      type: DataTypes.INTERGER,
+      type: DataTypes.INTEGER,
       allowNull: true,
       unique: false,
     },
