@@ -12,5 +12,8 @@
   },
   "devDependencies": {
     "nodemon": "^2.0.15"
+  },
+  "scripts": {
+    "seed": "node db/seeds.sql"
   }
 }
