@@ -7,9 +7,6 @@ const apiRoutes = require('./api');
 router.use('/api', apiRoutes);
 // router.use('/dashboard', dashRoutes);
 
-router.use((req, res) => {
-    res.status(404).end();
-});
 
 // router.use('/', homeRoutes);
 router.get('/', (req, res) => {
@@ -27,5 +24,10 @@ router.get('/', (req, res) => {
   router.get('/leaderboard', (req, res) => {
     res.render('leaderboard');
   });
+
+  router.use((req, res) => {
+    res.status(404).end();
+});
+
   
 module.exports = router;
