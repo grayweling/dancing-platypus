@@ -1,0 +1,241 @@
+<body class="background">
+<nav class="p-5 bg-slate-200 shadow md:flex md:items-center md:justify-between">
+      <div class="flex justify-between items-center">
+        <span class="tex -2xl cursor-pointer">
+          <img class="h-10 inline" src="./images/cartoon-platypus.png" > The Dancing Platypus
+        </span>
+        <span class="text-3xl cursor-pointer mx-2 md:hidden block">
+          <ion-icon name="menu" onclick="Menu(this)"></ion-icon>
+        </span>
+      </div>
+      <ul
+        class="md:flex md:items-center z-[-1] md:z-auto md:static absolute bg-slate-200 w-full left-0 md:w-auto md:py-0 py-4 md:pl-0 pl-7 md:opacity-100 opacity-0 top-[-400px] transition-all ease-in duration-500"
+      >
+      <li class="mx-4 my-6 md:my-0"> 
+                <a href="/dashboard" class="text-cyan-600">Back to Game</a>
+              </li> 
+                <p class="bg-cyan-400 cursor-pointer rounded-md duration-500 px-6 py-2 mx-4 hover:bg-slate-500 hover:outline outline-2 outline-black outline-offset-2 text-sm">  
+               
+                <a href="/signin" class="text-white">Sign Out</a>
+              </p>
+      </ul>
+
+</nav>
+<style>
+    
+    .background {
+        
+  background-image: url("../images/monster.jpg");
+  background-size: cover;
+  background-position: center;
+}
+</style>
+
+<br><br>
+
+<header>
+    <h1>HIGH SCORES!
+      <ion-icon name="trophy"></ion-icon>
+       </h1>
+
+    <div class="squares">
+        <div class="icon1">
+           <p>Your Score!</p>
+           125
+        </div>
+      
+  </header>
+
+  <body class="board" >
+  <table >
+    <thead>
+      <tr>
+        <th class="rank"></th>
+        <th class="nick">Nickname</th>
+        <th class="clicks">clicks</th>
+      </tr>
+    </thead>
+
+    <tbody id="rank_table" id = "center">
+        <td class="rank">1</td>
+        <td class="nick"></td>
+        <td class="clicks"></td>
+        <td class=""></td>
+      </tr>
+      <tr>
+        <td class="rank">2</td>
+        <td class="nick"></td>
+        <td class="clicks"></td>
+        <td class=""></td>
+      </tr>
+      <tr>
+        <td class="rank">3</td>
+        <td class="nick"></td>
+        <td class="clicks"></td>
+        <td class=""></td>
+      </tr>
+      <tr>
+        <td class="rank">4</td>
+        <td class="nick"></td>
+        <td class="clicks"></td>
+        <td class=""></td>
+      </tr>
+      <tr>
+        <td class="rank">5</td>
+        <td class="nick"></td>
+        <td class="clicks"></td>
+        <td class=""></td>
+      </tr>
+      <tr>
+        <td class="rank">6</td>
+        <td class="nick"></td>
+        <td class="clicks"></td>
+        <td class=""></td>
+      </tr>
+      <tr>
+        <td class="rank">7</td>
+        <td class="nick"></td>
+        <td class="clicks"></td>
+        <td class=""></td>
+        
+      </tr>
+      <tr>
+          <td class="rank">8</td>
+          <td class="nick"></td>
+          <td class="clicks"></td>
+          <td class=""></td>
+          
+        </tr>
+        <tr>
+          <td class="rank">9</td>
+          <td class="nick"></td>
+          <td class="clicks"></td>
+          <td class=""></td>
+          
+        </tr>
+        <tr>
+            <td class="rank">10</td>
+            <td class="nick"></td>
+            <td class="clicks"></td>
+            <td class=""></td>
+            
+          </tr>
+    </tbody>
+
+  </table>
+  <script src="/js/rank.js"></script>
+</body>
+</div>
+
+<style>
+    * {
+margin: 0;
+padding: 0;
+box-sizing: border-box;
+}
+.icon1,
+.icon2 {
+    width: 200px;
+    height: 200px;
+    display: inline-block;
+    background: #16181e;
+}
+.icon1 {
+    margin-right: 10%;
+    border-style: ridge;
+    text-align:center;
+}
+.leaderboard {
+
+margin: 5rem auto;
+border-radius: 1rem;
+box-shadow: 2px 2px 16px 1px #aaa;
+font-family: sans-serif;
+}
+.center {
+    display: table-cell;
+  counter-increment: rowNumber;
+  content: counter(rowNumber) ".";
+  padding-right: 0.3em;
+  text-align: right;
+}
+a {
+text-decoration: none;
+color: inherit;
+}
+.board {
+  counter-increment: rowNumber;
+  content: counter(rowNumber) ".";
+  text-align: right;
+  margin:auto;
+  width: 50%;
+  padding: 10px
+}
+header {
+background-color: #32cef9;
+color: white;
+text-transform: uppercase;
+border-top-left-radius: 1rem;
+border-top-right-radius: 1rem;
+height: 14rem;
+position: relative;
+}
+h1 {
+font-size: 3rem;
+line-height: 3rem;
+position: absolute
+margin-left: 3rem;
+top: 4rem; 
+}
+img {
+height: 16rem;
+bottom: 0;
+right: 1rem;
+}
+
+table {
+background-color: #16181e;
+color: #999;
+width: 100%;
+border-collapse: collapse;
+border-bottom-left-radius: 1rem;
+border-bottom-right-radius: 1rem;
+overflow: hidden;
+}
+thead {
+font-size: 0.7rem;
+color: #555;
+text-transform: uppercase;
+}
+tbody .nick {
+color: white;
+font-weight: bold;
+font-size: 0.9rem;
+}
+tbody tr:nth-child(2n) {
+background-color: #1f232c;
+}
+.nick {
+text-align: left;
+}
+.rank,
+.sp,
+.kd {
+text-align: right;
+}
+.rank {
+width: 4ch;
+padding-left: 1rem;
+}
+.sp,
+.kd {
+width: 8ch;
+}
+th {
+padding: 1.5rem 1rem 0.5rem;
+}
+td {
+padding: 1rem 1rem;
+}
+</style>
+

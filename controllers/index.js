@@ -11,4 +11,21 @@ router.use((req, res) => {
     res.status(404).end();
 });
 
+// router.use('/', homeRoutes);
+router.get('/', (req, res) => {
+    res.render('homepage');
+  });
+
+  router.get('/dashboard', (req, res) => {
+    res.render('dashboard');
+  });
+
+  router.get('/signin', (req, res) => {
+    res.render('signin');
+  });
+
+  router.get('/leaderboard', (req, res) => {
+    res.render('leaderboard');
+  });
+  
 module.exports = router;

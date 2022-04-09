@@ -1,0 +1,64 @@
+<body class="background">
+    <nav class="p-5 bg-slate-200 shadow md:flex md:items-center md:justify-between">
+      <div class="flex justify-between items-center">
+        <span class="tex -2xl cursor-pointer">
+          <img class="h-10 inline" src="./images/cartoon-platypus.png" > The Dancing Platypus
+        </span>
+        <span class="text-3xl cursor-pointer mx-2 md:hidden block">
+          <ion-icon name="menu" onclick="Menu(this)"></ion-icon>
+        </span>
+      </div>
+
+    </nav>
+    </body>
+ <style>
+    
+    .background {
+        
+  background-image: url("../images/monster.jpg");
+  background-size: cover;
+  background-position: center;
+}
+</style>   
+      <div class="flex justify-center items-center h-screen">
+        <div class="md:w-1/2 w-2/3 bg-slate-500"></div>
+      <div
+        id="form"
+        class="block bg-slate-200 p-6 rounded-xl shadow-md shadow-slate-300 md:w-1/2 w-1/3 border-2"
+      >
+        <form action="">
+          <h2 class="text-black text-3xl font-semibold my-4">Sign In</h2>
+          <br />
+            <!--email-->
+            <div id="email" class="mb-1">
+              <label for="email" class="text-sm">Email</label><br />
+              <input
+                type="email"
+                name=""
+                id="email"
+                class="h-8 w-full rounded-md border border-cyan-500 text-sm pl-2 bg-transparent outline-black shadow-sm"
+              />
+            </div>
+            <!--password-->
+            <div id="password" class="mb-1">
+              <label for="password" class="text-sm">Password</label><br />
+              <input
+                type="password"
+                name=""
+                id="password"
+                class="h-8 w-full rounded-md border border-cyan-500 text-sm pl-2 bg-transparent outline-black shadow-sm"
+              />
+            </div>
+        
+            <!--Submit-->
+{{!--               
+              <button href='/dashboard' class="mt-4 mb-4 bg-cyan-300 w-full h-10 cursor-pointer text-black rounded-md hover:bg-slate-500 hover:outline outline-2 outline-black outline-offset-2 text-sm">Submit</button> --}}
+              <li class="mx-4 my-6 md:my-0"> 
+                <a href="/dashboard" class="text-cyan-600">Submit</a>
+              </li> 
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
+ </body>

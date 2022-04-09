@@ -1,0 +1,130 @@
+ <body class="background">
+<div>
+  <nav class="p-5 bg-slate-200 shadow md:flex md:items-center md:justify-between">
+    <div class="flex justify-between items-center">
+      <span class="tex -2xl cursor-pointer">
+        <img class="h-10 inline" src="./images/cartoon-platypus.png" />
+        The Dancing Platypus
+      </span>
+      <span class="text-3xl cursor-pointer mx-2 md:hidden block">
+        <ion-icon name="menu" onclick="Menu(this)"></ion-icon>
+      </span>
+    </div>
+    <ul
+      class="md:flex md:items-center z-[-1] md:z-auto md:static absolute bg-slate-200 w-full left-0 md:w-auto md:py-0 py-4 md:pl-0 pl-7 md:opacity-100 opacity-0 top-[-400px] transition-all ease-in duration-500"
+    >
+    <li class="mx-4 my-6 md:my-0"><p id="timerClick" style="display: none">Time :<b id="runTime">60</b></p></li>
+    <li class="mx-4 my-6 md:my-0"><p id="imageClick" style="display: none">Counter: <b id="runClick">0</b></p></li>
+      <li class="mx-4 my-6 md:my-0">
+        <a href="leaderboard" class="text-cyan-600">High
+          Scores</a>
+      </li>
+<li><p
+        class="bg-cyan-400 cursor-pointer rounded-md duration-500 px-6 py-2 mx-4 hover:bg-slate-500 hover:outline outline-2 outline-black outline-offset-2 text-sm"
+      >
+
+        <a href="/signin" class="text-white">Sign Out</a>
+      </p></li>
+      
+
+    </ul>
+
+  </nav>
+  </body>
+  <br />
+  <br />
+<style>
+    
+    .background {
+
+  background-image: url("../images/monster.jpg");
+  background-size: cover;
+  background-position: center;
+}
+</style>
+
+  
+  {{! <style>
+        img:click{
+            -webkit-transform: scaleX(-1);
+            transform: scaleX(-1)
+        }
+    </style>
+    <button type="button" id="platypus"><img src="./images/cartoon-platypus.png" width="400" height"600" class="center"/></button> }}   
+  
+  
+  
+
+  <br>
+  <br>
+  
+  <img
+    src="./images/cartoon-platypus.png"
+    alt="cartoon"
+    width="400"
+    class="center"
+    id="cartoonImage"
+    onClick="flipImage()"
+  />
+
+  <script>
+
+    var x = true; 
+    var t = 60;
+    var c = 0;
+    var d;
+
+function showtime() {
+    t--;
+    if (t < 0) {
+        stop();
+    }
+    document.getElementById('runTime').innerText = t;
+}
+
+function start() {
+    document.getElementById('timerClick').style.display = "block";
+    document.getElementById('imageClick').style.display = "block";
+    d = setInterval(showtime, 1000);
+}
+function stop() {
+    document.getElementById('timerClick').style.display = "none";
+    document.getElementById('cartoonImage').style.display = "none";
+    clearInterval(d);
+      return window.location.assign('../leaderboard');
+}
+
+function music() {
+    var audio = document.getElementById("audio");
+        audio.play();
+}
+
+{{!-- click function --}}
+    function flipImage() { 
+        c++;
+        music();
+    document.getElementById('runClick').innerText = c;
+
+        if ( t === 60) {
+            start();
+        } 
+        
+        if ( t < 0 ) {
+            stop();   
+        }
+        
+        
+        if (x) { 
+            x = false;
+            document.getElementById('cartoonImage').style.transform = 'scaleX(-1)'; 
+            } else { 
+                x = true; 
+                document.getElementById('cartoonImage').style.transform = 'scaleX(1)'; 
+                } 
+            }
+  </script>
+  {{! <ion-icon name="musical-notes"></ion-icon>" }}
+
+   <audio id="audio" src="./music/play.wav"></audio>
+
+</div>
