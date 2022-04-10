@@ -36,12 +36,12 @@ const userAuth = require('../utils/auth');
 // });
 
 //----- User login route -----//
-router.get('/login', (req, res) => {
+router.get('/signin', (req, res) => {
   if (req.session.loggedIn) {
     res.redirect('/dashboard');
     return;
   }
-  res.render('login');
+  res.render('signin');
 });
 
 //----- Direct user to signup page when clicking signup link -----//

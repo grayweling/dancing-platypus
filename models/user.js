@@ -21,7 +21,6 @@ User.init(
       allowNull: false,
       unique: true,
     },
-
     email: {
       type: DataTypes.STRING,
       allowNull: false,
@@ -36,6 +35,11 @@ User.init(
       validate: {
         len: [6],
       },
+    },
+    score: {
+      type: DataTypes.INTEGER,
+      allowNull: true,
+      defaultValue: 0,
     },
   },
   {
@@ -56,7 +60,7 @@ User.init(
     timestamps: false,
     freezeTableName: true,
     underscored: true,
-    modelName: 'User',
+    modelName: 'user',
   }
 );
 

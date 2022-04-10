@@ -1,13 +1,17 @@
 async function createAccount(event) {
     event.preventDefault();
 
-    const username = document.querySelector('#signup-username').value.trim();
-    const email = document.querySelector('#signup-email').value.trim();
-    const password = document.querySelector('#signup-password').value.trim();
+    const username = document.querySelector('#username').value.trim();
+    const email = document.querySelector('#email').value.trim();
+    const password = document.querySelector('#password').value.trim();
+
+    console.log(email, password, username);
+    console.log("hello");
+    console.log(event);
 
     if (username && email && password) {
         const response = await fetch('/api/users', {
-            method: 'POST',
+            method: 'post',
             body: JSON.stringify({
                 username,
                 email,
@@ -17,8 +21,7 @@ async function createAccount(event) {
         });
 
         if (response.ok) {
-            console.log(`Account for ${username} has been created! Now GIT blogging!`);
-            document.location.replace('/login');
+            document.location.replace('/signin');
         } else {
             alert(response.statusText);
         }
