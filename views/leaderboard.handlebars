@@ -56,70 +56,13 @@
       </tr>
     </thead>
 
-    <tbody id="rank_table" id = "center">
+    <tbody id="rank_table" class = "center">
+      {{!-- <tr>
         <td class="rank">1</td>
         <td class="username"></td>
         <td class="clicks"></td>
-        <td class=""></td>
-      </tr>
-      <tr>
-        <td class="rank">2</td>
-        <td class="username"></td>
-        <td class="clicks"></td>
-        <td class=""></td>
-      </tr>
-      <tr>
-        <td class="rank">3</td>
-        <td class="username"></td>
-        <td class="clicks"></td>
-        <td class=""></td>
-      </tr>
-      <tr>
-        <td class="rank">4</td>
-        <td class="username"></td>
-        <td class="clicks"></td>
-        <td class=""></td>
-      </tr>
-      <tr>
-        <td class="rank">5</td>
-        <td class="username"></td>
-        <td class="clicks"></td>
-        <td class=""></td>
-      </tr>
-      <tr>
-        <td class="rank">6</td>
-        <td class="username"></td>
-        <td class="clicks"></td>
-        <td class=""></td>
-      </tr>
-      <tr>
-        <td class="rank">7</td>
-        <td class="username"></td>
-        <td class="clicks"></td>
-        <td class=""></td>
-        
-      </tr>
-      <tr>
-          <td class="rank">8</td>
-          <td class="username"></td>
-          <td class="clicks"></td>
-          <td class=""></td>
-          
-        </tr>
-        <tr>
-          <td class="rank">9</td>
-          <td class="username"></td>
-          <td class="clicks"></td>
-          <td class=""></td>
-          
-        </tr>
-        <tr>
-            <td class="rank">10</td>
-            <td class="username"></td>
-            <td class="clicks"></td>
-            <td class=""></td>
-            
-          </tr>
+      </tr> --}}
+      
     </tbody>
 
   </table>
@@ -239,3 +182,16 @@ padding: 1rem 1rem;
 }
 </style>
 
+<script>
+  let x = localStorage.getItem('userScore');
+  let y = document.getElementById('rank_table');
+
+  let tr = document.createElement("tr");
+  let td1 = document.createElement("td").innerText(1);
+  let td2 = document.createElement("td").innerText('ABC');
+  let td3 = document.createElement("td").innerText(x);
+  tr.append(td1);
+  tr.append(td2);
+  tr.append(td3);
+  y.append(tr);
+</script>

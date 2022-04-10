@@ -1,5 +1,3 @@
-const User = require('../models/user');
-
 function getRanks(){
     top10users = User.slice(0,10)
     table_rank = document.getElementById("rank_table").rows;
@@ -23,4 +21,4 @@ function getRanks(){
     }
 }
 
-getRanks();
+// getRanks();

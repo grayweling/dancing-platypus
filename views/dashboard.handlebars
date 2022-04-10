@@ -91,6 +91,7 @@ function stop() {
     document.getElementById('timerClick').style.display = "none";
     document.getElementById('cartoonImage').style.display = "none";
     clearInterval(d);
+    localStorage.setItem('userScore', c);
       return window.location.assign('../leaderboard');
 }
 
