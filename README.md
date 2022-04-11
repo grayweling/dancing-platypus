@@ -10,7 +10,7 @@ This application will help keep children entertained so their parents can work o
 
 <img src="public/images/dancing-platypus.JPG" alt="Dancing Platypus Screenshot">
 
-## 🧐 Installation 
+## Installation 
 - You will need to install necessary dependencies by running the following command in your terminal
 
 ```bash
